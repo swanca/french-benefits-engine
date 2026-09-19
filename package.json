@@ -1,0 +1,14 @@
+{
+  "name": "french-benefits-engine",
+  "version": "0.1.0",
+  "description": "A deterministic eligibility engine for French social benefits, where rules are validated data rather than executable code",
+  "license": "MIT",
+  "type": "module",
+  "main": "src/engine.ts",
+  "scripts": {
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": { "zod": "^4.5.4" },
+  "devDependencies": { "@types/node": "^26.5.0", "tsx": "^4.23.13", "typescript": "^7.0.2" }
+}
