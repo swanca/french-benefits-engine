@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "version": 1,
+  "reviewedAt": "2026-09-09",
+  "reviewDue": "2026-09-16",
+  "rules": [
+    {"rightId":"rsa","version":1,"required":["age","children"],"note":"Les ressources du foyer, la résidence et les exceptions doivent être vérifiées avec la CAF ou la MSA.","advisories":[{"when":{"field":"age","max":24},"note":"Avant 25 ans, des exceptions existent notamment pour les parents, la grossesse et certains jeunes actifs ; votre situation doit être examinée."}]},
+    {"rightId":"prime-activite","version":1,"required":["age","activity"],"any":[{"field":"activity","values":["employee","independent","student"]}],"note":"Vérifiez les revenus d’activité, les ressources du foyer et les situations particulières dans le simulateur officiel."},
+    {"rightId":"apl","version":1,"required":["housing"],"any":[{"field":"housing","values":["tenant"]}],"note":"Le conventionnement, les ressources et le logement déterminent le droit ; les aides APL, ALF et ALS ne se cumulent pas."},
+    {"rightId":"aah","version":1,"required":[],"outside":true,"note":"Orientation générale vers la MDPH : aucune situation médicale n’est déduite ni demandée ici. Ce questionnaire ne peut pas évaluer ce droit."},
+    {"rightId":"bourse-crous","version":1,"required":["activity"],"any":[{"field":"activity","values":["student"]}],"note":"La formation, les revenus fiscaux de référence de la campagne et les points de charge restent à vérifier dans le DSE."},
+    {"rightId":"cheque-energie","version":1,"required":["housing"],"note":"Vérifiez la campagne applicable, le foyer fiscal et le logement sur le portail officiel."},
+    {"rightId":"ars","version":1,"required":["children"],"any":[{"field":"children","min":1}],"note":"L’âge des enfants à la date réglementaire, la scolarité et les ressources annuelles restent à vérifier."},
+    {"rightId":"allocations-familiales","version":1,"required":["children"],"any":[{"field":"children","min":1}],"note":"Les conditions varient notamment selon le territoire, le nombre et l’âge des enfants ; un seul enfant n’est pas exclu automatiquement."},
+    {"rightId":"aspa","version":1,"required":["age","activity"],"any":[{"field":"age","min":65},{"field":"activity","values":["retired"]}],"note":"Vérifiez l’âge et ses exceptions auprès de la caisse, les ressources, le patrimoine et la récupération sur succession."},
+    {"rightId":"age-france-travail","version":1,"required":["children"],"any":[{"field":"children","min":1}],"note":"La reprise d’emploi ou de formation, l’inscription et les conditions de garde sont à vérifier auprès de France Travail, y compris les dérogations."},
+    {"rightId":"arce","version":1,"required":["activity"],"any":[{"field":"activity","values":["unemployed","independent"]}],"note":"La création d’entreprise, l’ARE et l’ACRE sont à vérifier. L’ARCE est une option en capital, pas un revenu annuel à additionner à l’ARE."},
+    {"rightId":"are","version":1,"required":["activity"],"any":[{"field":"activity","values":["unemployed","employee","independent"]}],"note":"Les dates de contrat, l’historique de travail et le régime applicable nécessitent le parcours officiel France Travail."}
+  ]
+}
